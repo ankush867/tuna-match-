@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Free Fire Tuna Match</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🔥 Free Fire Tuna Match</h1>
+
+<!-- STEP 1 -->
+<div class="box" id="step1">
+  <h2>Select Team Type</h2>
+  <select id="teamType">
+    <option value="">-- Select --</option>
+    <option value="1">Solo (1 Player)</option>
+    <option value="2">Duo (2 Players)</option>
+    <option value="4">Squad (4 Players)</option>
+  </select>
+  <button onclick="goStep2()">Next</button>
+</div>
+
+<!-- STEP 2 -->
+<div class="box hidden" id="step2">
+  <h2>Enter Player Details</h2>
+  <div id="players"></div>
+  <button onclick="goStep3()">Next</button>
+</div>
+
+<!-- STEP 3 -->
+<div class="box hidden" id="step3">
+  <h2>Payment</h2>
+  <p>Entry Fee: ₹20</p>
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=UPI-DEMO">
+  <br><br>
+  <button onclick="goStep4()">Payment Done</button>
+</div>
+
+<!-- STEP 4 -->
+<div class="box hidden" id="step4">
+  <h2>Match Starts In</h2>
+  <div class="timer" id="timer">05:00</div>
+</div>
+
+<!-- STEP 5 -->
+<div class="box hidden" id="step5">
+  <h2>Room Details</h2>
+  <p><b>Room ID:</b> 45879612</p>
+  <p><b>Password:</b> FF123</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
